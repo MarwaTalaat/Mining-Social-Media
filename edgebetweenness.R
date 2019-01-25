@@ -1,0 +1,11 @@
+library(igraph)
+myGraph <- read.csv(file.choose(),header = T)
+myGraph <- graph.data.frame (myGraph,directed=F)
+myGraph
+plot(myGraph)
+plot(myGraph,vertex.size=3, vertex.color="red")
+all_shortest_paths(myGraph,1,2)
+betweenness(myGraph)
+edge.betweenness.community(myGraph)
+#shortest.paths(myGraph)
+#page.rank(myGraph)
